@@ -7,7 +7,7 @@
     require_once "sidebar.php";
 ?>
 
-<div class="mt-4 col-md-9 ms-sm-auto col-lg-10 px-md-4 d-flex align-items-center fs-6">
+<div class="col-md-9 ms-sm-auto col-lg-10 pt-4 pb-1 px-3 d-flex align-items-center fs-6">
     <nav aria-label="breadcrumb fs-3">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="<?= base_url('pegawai') ?>">Data Pegawai</a></li>
