@@ -1,7 +1,7 @@
 <?php
     require_once "sidebar.php";
 ?>
-    <div class="mb-4 col-md-9 ms-sm-auto col-lg-10 px-md-4 d-flex align-items-center">
+    <div class="mt-4 col-md-9 ms-sm-auto col-lg-10 px-md-4 d-flex align-items-center fs-6">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">Data Pegawai</li>
