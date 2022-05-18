@@ -29,10 +29,10 @@
 
         <body>
             <!-- Sidebar -->
-            <nav class="sidebar d-flex flex-nowrap col-md-3 col-lg-2 d-md-inline bg-light">
+            <nav class="sidebar d-flex flex-nowrap col-md-3 col-lg-2">
                 <div class="d-flex flex-column flex-shrink-0 p-3">
                     <a href="<?= base_url('pegawai') ?>" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                        <span class="sidebar-header fs-4"><i class='bx bx-happy-alt'></i> SIMPEG</span>
+                        <span class="sidebar-header fs-4 mx-4"><i class='bx bx-group'></i> SIMPEG</span>
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
@@ -41,15 +41,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle disabled"><i class='bx bx-money'></i> Jabatan dan Gaji
+                            <a href="#" class="nav-link btn-toggle disabled" aria-disabled="true"><i class='bx bx-money'></i> Jabatan dan Gaji
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle disabled"><i class='bx bx-fingerprint'></i> Presensi dan Cuti
+                            <a href="#" class="nav-link btn-toggle disabled" aria-disabled="true"><i class='bx bx-fingerprint'></i> Presensi dan Cuti
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle disabled"><i class='bx bxs-report'></i> Laporan Kepegawaian
+                            <a href="#" class="nav-link btn-toggle disabled" aria-disabled="true"><i class='bx bxs-report'></i> Laporan Kepegawaian
                             </a>
                         </li>
                     </ul>

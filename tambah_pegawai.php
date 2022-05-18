@@ -7,7 +7,7 @@
     require_once "sidebar.php";
 ?>
 
-<div class="col-md-9 ms-sm-auto col-lg-10 pt-4 pb-1 px-3 d-flex align-items-center fs-6">
+<div class="col-md-9 ms-sm-auto col-lg-10 pt-4 pb-1 px-3 d-flex align-items-center fs-6 bread">
     <nav aria-label="breadcrumb fs-3">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="<?= base_url('pegawai') ?>">Data Pegawai</a></li>
@@ -88,9 +88,9 @@
                         </label>
                     </div>
                     <div class="form-check mr-3">
-                        <input class="form-check-input" type="radio" name="status_pegawai" id="status2" value="Non-Aktif">
+                        <input class="form-check-input" type="radio" name="status_pegawai" id="status2" value="Nonaktif">
                         <label class="form-check-label" for="status2">
-                            Non-Aktif
+                            Nonaktif
                         </label>
                     </div>
                 </div>

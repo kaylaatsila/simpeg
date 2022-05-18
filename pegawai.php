@@ -1,7 +1,7 @@
 <?php
     require_once "sidebar.php";
 ?>
-    <div class="bread col-md-9 ms-sm-auto col-lg-10 pt-4 pb-1 px-3 d-flex align-items-center fs-6 ">
+    <div class="bread col-md-9 ms-sm-auto col-lg-10 fs-6 pt-4 pb-1 px-3">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">Data Pegawai</li>
@@ -32,7 +32,7 @@
                     <tbody>
                         <?php
                         $no = 1;
-                        $data_p = query("SELECT * FROM pegawai GROUP BY nama_pegawai asc");
+                        $data_p = query("SELECT * FROM pegawai GROUP BY nip asc");
                         foreach ($data_p as $p) : ?>
                             <tr>
                                 <td>
