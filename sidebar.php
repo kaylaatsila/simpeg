@@ -29,13 +29,13 @@
             <!-- Sidebar -->
             <nav class="sidebar d-flex flex-nowrap col-md-3 col-lg-2 d-md-inline bg-light">
                 <div class="d-flex flex-column flex-shrink-0 p-3">
-                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                    <a href="<?= base_url('pegawai') ?>" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                         <span class="fs-4">SIMPEG</span>
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link link-dark btn-toggle"> Data Diri
+                            <a href="<?= base_url('pegawai') ?>" class="nav-link link-dark btn-toggle"> Data Diri
                             </a>
                         </li>
                         <li>

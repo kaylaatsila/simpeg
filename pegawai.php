@@ -1,12 +1,13 @@
 <?php
     require_once "sidebar.php";
 ?>
-
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Data Pegawai</li>
-        </ol>
-    </nav>
+    <div class="mb-4 col-md-9 ms-sm-auto col-lg-10 px-md-4 d-flex align-items-center">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Data Pegawai</li>
+            </ol>
+        </nav>
+    </div>
 
     <!-- DataTales Example -->
     <div class="card mb-4 col-md-9 ms-sm-auto col-lg-10 px-md-4">

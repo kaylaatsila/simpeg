@@ -18,7 +18,7 @@
     // fungsi yang digunakan untuk memanggil sebuah library
     function asset($url = null)    {
         // set default url library
-        $asset_url = "http://localhost/simpeg";
+        $asset_url = "http://localhost/adsi";
 
         // jika url yang dikirimkan meimiliki nilai
         if ($url != null) {
@@ -32,12 +32,12 @@
     // fungsi yang digunakan untuk mengarahkan halaman
     function base_url($url=null){
         // set default url halaman
-        $baseurl = "http://localhost/simpeg";
+        $baseurl = "http://localhost/adsi";
 
         // jika url yang dikirimkan meimiliki nilai
         if ($url != null) {
             // sistem akan mengarahkan ke url yang dituju
-            return $baseurl.$url.'.php';
+            return $baseurl.'/'.$url.'.php';
         } else{
             return $baseurl;
         }
