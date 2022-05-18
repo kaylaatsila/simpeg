@@ -2,16 +2,16 @@
     require_once "sidebar.php";
 ?>
 
-    <!-- <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">Data Pegawai</li>
         </ol>
-    </nav> -->
+    </nav>
 
     <!-- DataTales Example -->
     <div class="card mb-4 col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="card-header py-3">
-            <a href="" class="btn btn-primary btn-sm float-right"><i class="fas fa-user-plus"></i> Tambah Pegawai</a>
+            <a href="<?= base_url('tambah_pegawai') ?>" class="btn btn-primary btn-sm float-right"><i class="fas fa-user-plus"></i> Tambah Pegawai</a>
             <!-- <a href="" target="_blank" class="btn btn-info btn-sm float-right mr-3"><i class="fas fa-print"></i> Print Pegawai</a> -->
         </div>
         <div class="card-body">
@@ -24,7 +24,6 @@
                             <th>NIP</th>
                             <th>Email</th>
                             <th>No. HP</th>
-                            <th>Status Kepegawaian</th>
                             <th>Aktif/Nonaktif</th>
                             <th>Opsi</th>
                         </tr>
@@ -32,6 +31,7 @@
                     <tbody>
                         <?php
                         $no = 1;
+                        $data_p = query("SELECT * FROM pegawai GROUP BY nama_pegawai asc");
                         foreach ($data_p as $p) : ?>
                             <tr>
                                 <td>
@@ -50,15 +50,10 @@
                                     <?= $p['no_hp'] ?>
                                 </td>
                                 <td>
-                                    <?= strtoupper($p['status_kepegawaian']) ?>
-                                </td>
-                                <td>
-                                    <?= ucwords($p['status_user']) ?>
+                                    <?= ucwords($p['status_pegawai']) ?>
                                 </td>
                                 <td>
                                     <a href="" class="btn btn-success btn-sm"><i class="fas fa-eye"></i> Detail</a>
-                                    <a href="" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                                    <a href="" target="_blank" class="btn btn-info btn-sm"><i class="fas fa-print"></i> Print</a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

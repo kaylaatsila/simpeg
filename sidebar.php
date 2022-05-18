@@ -1,5 +1,12 @@
 <?php
-    
+    // jika yang dipanggil user adalah file yang berada didalam subfolder dan memiliki variabel sub, panggil file config yang ada sesuai dengan posisi file di folder
+    if (isset($sub)) {
+        // memanggil data configurasi dan function dari subfolder
+        require_once $sub."config/config.php";
+    }else{
+        // memanggil data configurasi dan function
+        require_once "config/config.php";
+    }
 ?>
 
     <!DOCTYPE html>
