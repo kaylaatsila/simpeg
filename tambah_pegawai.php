@@ -1,10 +1,5 @@
 <?php
-    //variabel yang berfungsi menyimpan detail dari sub judul website
-    $nama = 'Tambah Pegawai'; 
-    //variabel yang berfungsi mengatifkan sidebar
-    $pegawai = 'pegawai';
-
-    require_once "sidebar.php";
+    require_once "templates/sidebar.php";
 ?>
 
 <div class="col-md-9 ms-sm-auto col-lg-10 pt-4 pb-1 px-3 d-flex align-items-center fs-6 bread">
@@ -16,7 +11,7 @@
     </nav>
 </div>
 
-<div class="card mb-4 col-md-9 ms-sm-auto col-lg-10 px-md-4">
+<div class="card col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="card-body">
         <form method="POST" action="<?= base_url('config/proses_pegawai') ?>?add" enctype="multipart/form-data">
             <div class="form-group row mb-2">

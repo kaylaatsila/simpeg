@@ -25,7 +25,7 @@
 
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-        <link href="styles.css" rel="stylesheet">
+        <link href="assets/styles.css" rel="stylesheet">
 
         <body>
             <!-- Sidebar -->
