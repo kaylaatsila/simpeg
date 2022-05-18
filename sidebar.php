@@ -23,6 +23,8 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
         <link href="styles.css" rel="stylesheet">
 
         <body>
@@ -30,7 +32,7 @@
             <nav class="sidebar d-flex flex-nowrap col-md-3 col-lg-2 d-md-inline bg-light">
                 <div class="d-flex flex-column flex-shrink-0 p-3">
                     <a href="<?= base_url('pegawai') ?>" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                        <span class="fs-4">SIMPEG</span>
+                        <span class="sidebar-header fs-4">SIMPEG</span>
                     </a>
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
@@ -39,19 +41,19 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle"> Jabatan dan Gaji
+                            <a href="#" class="nav-link link-dark btn-toggle-disable"> Jabatan dan Gaji
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle"> Riwayat Presensi
+                            <a href="#" class="nav-link link-dark btn-toggle-disable"> Riwayat Presensi
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle"> Cuti
+                            <a href="#" class="nav-link link-dark btn-toggle-disable"> Cuti
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle"> Laporan Kinerja
+                            <a href="#" class="nav-link link-dark btn-toggle-disable"> Laporan Kinerja
                             </a>
                         </li>
                     </ul>
