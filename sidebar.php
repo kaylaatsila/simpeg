@@ -37,23 +37,19 @@
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item">
-                            <a href="<?= base_url('pegawai') ?>" class="nav-link link-dark btn-toggle"> Data Diri
+                            <a href="<?= base_url('pegawai') ?>" class="nav-link link-dark btn-toggle"><i class='bx bx-user'></i> Data Pegawai
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle-disable"> Jabatan dan Gaji
+                            <a href="#" class="nav-link link-dark btn-toggle-disable"><i class='bx bx-money'></i> Jabatan dan Gaji
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle-disable"> Riwayat Presensi
+                            <a href="#" class="nav-link link-dark btn-toggle-disable"><i class='bx bx-fingerprint'></i> Presensi dan Cuti
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link link-dark btn-toggle-disable"> Cuti
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link link-dark btn-toggle-disable"> Laporan Kinerja
+                            <a href="#" class="nav-link link-dark btn-toggle-disable"><i class='bx bxs-report'></i> Laporan Kepegawaian
                             </a>
                         </li>
                     </ul>
