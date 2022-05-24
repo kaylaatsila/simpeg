@@ -46,7 +46,7 @@ $data_detail = query("SELECT * FROM pegawai WHERE nip='$nip'");
             <div class="card">
                 <div class="card-body">
                     <?php
-                    require_once "../profil.php";
+                    require_once "profil.php";
                     ?>
                 </div>
             </div>

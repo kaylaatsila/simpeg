@@ -12,12 +12,20 @@ if (isset($_GET['add'])) {
     $alamat = strip_tags($_POST['alamat']);
     $status_pegawai = strip_tags($_POST['status_pegawai']);
 
-    create("INSERT INTO pegawai VALUES ('$nip', '$nama_pegawai', '$tempat_lahir', '$tgl_lahir', '$jk', '$no_hp', '$email', '$alamat', '$status_pegawai')");
+    $query = create("INSERT INTO pegawai VALUES ('$nip', '$nama_pegawai', '$tempat_lahir', '$tgl_lahir', '$jk', '$no_hp', '$email', '$alamat', '$status_pegawai')");
 
-    // echo '<script>
-    //     alert("Data Berhasil Ditambah")
-    //     window.location = "' . base_url('pegawai') . '";
-    //     </script>';
+    if ($query) {
+        echo '<script>
+            alert("Data berhasil ditambah!")
+            window.location = "' . adm_url('pegawai') . '";
+            </script>';
+    } else {
+        echo '<script>
+            alert("Data gagal ditambah!")
+            window.location = "' . adm_url('edit_pegawai') . '?id=' . $nipAsli . '";
+            </script>';
+    }
+
 
 } elseif (isset($_GET['edit'])) {
     $nipAsli = mysqli_real_escape_string($koneksi, $_POST['nipAsli']);
@@ -35,12 +43,12 @@ if (isset($_GET['add'])) {
 
     if ($query) {
         echo '<script>
-            alert("Data Berhasil Diperbarui")
+            alert("Data berhasil diperbaharui!")
             window.location = "' . adm_url('pegawai') . '";
             </script>';
     } else {
         echo '<script>
-            alert("Data Gagal Diperbarui")
+            alert("Data gagal diperbaharui!")
             window.location = "' . adm_url('edit_pegawai') . '?id=' . $nipAsli . '";
             </script>';
     }
