@@ -27,6 +27,13 @@ if (isset($sub)) {
 
     <link href="assets/styles.css" rel="stylesheet">
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+
 <body>
     <!-- Sidebar -->
     <nav class="sidebar d-flex flex-nowrap col-md-3 col-lg-2">
