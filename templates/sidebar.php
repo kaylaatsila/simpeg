@@ -5,7 +5,7 @@ if (isset($sub)) {
     require_once $sub . "config/config.php";
 } else {
     // memanggil data configurasi dan function
-    require_once "config/config.php";
+    require_once "../config/config.php";
 }
 ?>
 
@@ -25,7 +25,7 @@ if (isset($sub)) {
 
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    <link href="assets/styles.css" rel="stylesheet">
+    <link href="../assets/styles.css" rel="stylesheet">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
@@ -38,21 +38,21 @@ if (isset($sub)) {
     <!-- Sidebar -->
     <nav class="sidebar d-flex flex-nowrap col-md-3 col-lg-2">
         <div class="d-flex flex-column flex-shrink-0 p-3">
-            <a href="<?= base_url('pegawai') ?>" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <a href="<?= adm_url('pegawai') ?>" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                 <span class="sidebar-header fs-4 mx-4"><i class='bx bx-group'></i> SIMPEG</span>
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="<?= base_url('pegawai') ?>" class="nav-link link-dark btn-toggle"><i class='bx bx-user'></i> Data Pegawai
+                    <a href="<?= adm_url('pegawai') ?>" class="nav-link link-dark btn-toggle"><i class='bx bx-user'></i> Data Pegawai
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('jabatan_gaji') ?>" class="nav-link link-dark btn-toggle"><i class='bx bx-money'></i> Jabatan dan Gaji
+                    <a href="<?= adm_url('jabatan_gaji') ?>" class="nav-link link-dark btn-toggle"><i class='bx bx-money'></i> Jabatan dan Gaji
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link btn-toggle disabled"><i class='bx bx-fingerprint'></i> Presensi dan Cuti
+                    <a href="<?= adm_url('presensi_cuti') ?>" class="nav-link link-dark btn-toggled"><i class='bx bx-fingerprint'></i> Presensi dan Cuti
                     </a>
                 </li>
                 <li>

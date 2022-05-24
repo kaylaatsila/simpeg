@@ -1,32 +1,32 @@
 <?php
-require_once "templates/sidebar.php";
+require_once "../templates/sidebar.php";
+
+//simpan data id(nip) yang dikirim dari halaman pegawai ke dalam variabel nip
+$id = $_GET['id'];
+
+// hasil dari proses result akan disimpan ke variabel data
+$data = query("SELECT * FROM pegawai INNER JOIN jabatan ON pegawai.id_jabatan=jabatan.id_jabatan WHERE nip='$id'");
 ?>
 
 <div class="container-fluid">
     <div class="col-md-9 ms-sm-auto col-lg-10 pt-4 pb-1 px-3 d-flex align-items-center fs-6 bread">
         <nav aria-label="breadcrumb fs-3">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?= base_url('jabatan_gaji') ?>">Data Jabatan dan Gaji</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Tambah Data</li>
+            <li class="breadcrumb-item"><a href="<?= adm_url('jabatan_gaji') ?>">Data Jabatan dan Gaji</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Edit Data</li>
             </ol>
         </nav>
     </div>
 
     <div class="card col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="card-body align-items-center">Semua pegawai sudah terdata!</div>
-        
-        <!-- <div class="card-body">
-            <form method="POST" action="<?= base_url('config/proses_jabatan') ?>?add">
+        <div class="card-body">
+            <form method="POST" action="<?= base_url('config/proses_jabatan') ?>?edit">
                 <div class="form-group row mb-2">
-                    <label for="nip" class="col-sm-3 col-form-label">Pilih Pegawai</label>
+                    <label for="id" class="col-sm-3 col-form-label">Pegawai</label>
                     <div class="col-sm-9">
-                        <select class="form-control" name="nip" id="nip" required autocomplete="off" autofocus>
-                            <?php
-                            $data_pegawai = query("SELECT * FROM pegawai GROUP BY nama_pegawai asc");
-                            foreach ($data_pegawai as $pegawai) : ?>
-                                <option value="<?= $pegawai['nip'] ?>"><?= $pegawai['nama_pegawai'] . ' - ' . $pegawai['nip'] ?></option>
-                            <?php endforeach; ?>
-                        </select>
+                        <input type="hidden" name="id" id="id" class="form-control" value="<?= $data[0]['id_jabatan'] ?>">
+                        <input type="hidden" name="nip" id="nip" class="form-control" value="<?= $data[0]['nip'] ?>">
+                        <input type="text" name="id2" id="id2" class="form-control" value="<?= ucwords($data[0]['nama_pegawai']) .' - '.$data[0]['nip'] ?>" readonly>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
@@ -36,7 +36,7 @@ require_once "templates/sidebar.php";
                             <?php
                             $data_jabatan = query("SELECT * FROM jabatan GROUP BY id_jabatan asc");
 
-                            foreach ($data_jabatan as $jabatan) : ?>
+                            foreach ($data_jabatan as $jabatan) : ?>                      
                                 <option value="<?= $jabatan['id_jabatan'] ?>"><?= $jabatan['nama_jabatan'] ?></option>
                             <?php endforeach; ?>
                         </select>
@@ -59,6 +59,6 @@ require_once "templates/sidebar.php";
         <div class="card-footer">
             <button type="submit" class="btn btn-success"><i class='bx bx-save'></i> Simpan</button>
         </div>
-        </form> -->
+        </form>
     </div>
 </div>

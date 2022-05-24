@@ -1,20 +1,22 @@
 <?php
-require_once "templates/sidebar.php";
+require_once "../templates/sidebar.php";
 ?>
 
 <div class="container-fluid">
     <div class="col-md-9 ms-sm-auto col-lg-10 pt-4 pb-1 px-3 d-flex align-items-center fs-6 bread">
         <nav aria-label="breadcrumb fs-3">
             <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= base_url('jabatan_gaji') ?>">Data Jabatan dan Gaji</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Edit Data</li>
+                <li class="breadcrumb-item"><a href="<?= adm_url('jabatan_gaji') ?>">Data Jabatan dan Gaji</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tambah Data</li>
             </ol>
         </nav>
     </div>
 
     <div class="card col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="card-body">
-            <form method="POST" action="<?= base_url('config/proses_jabatan') ?>?update">
+        <div class="card-body align-items-center">Semua pegawai sudah terdata!</div>
+        
+        <!-- <div class="card-body">
+            <form method="POST" action="<?= adm_url('config/proses_jabatan') ?>?add">
                 <div class="form-group row mb-2">
                     <label for="nip" class="col-sm-3 col-form-label">Pilih Pegawai</label>
                     <div class="col-sm-9">
@@ -57,6 +59,6 @@ require_once "templates/sidebar.php";
         <div class="card-footer">
             <button type="submit" class="btn btn-success"><i class='bx bx-save'></i> Simpan</button>
         </div>
-        </form>
+        </form> -->
     </div>
 </div>

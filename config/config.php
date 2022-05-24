@@ -43,6 +43,19 @@
         }
     }
 
+    function adm_url($url=null){
+        // set default url halaman
+        $admurl = "http://localhost/adsi/admin";
+
+        // jika url yang dikirimkan meimiliki nilai
+        if ($url != null) {
+            // sistem akan mengarahkan ke url yang dituju
+            return $admurl.'/'.$url.'.php';
+        } else{
+            return $admurl;
+        }
+    }
+
     // yang membedakan asset dan base_url adalah di ekstension file yang ada di base_url
 
     // fungsi yang digunakan untuk mengeksekusi data yang ingin ditampilkan

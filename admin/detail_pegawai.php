@@ -1,5 +1,5 @@
 <?php
-require_once "templates/sidebar.php";
+require_once "../templates/sidebar.php";
 
 //simpan data id(nip) yang dikirim dari halaman pegawai ke dalam variabel nip
 $nip = $_GET['id'];
@@ -24,7 +24,7 @@ $data_detail = query("SELECT * FROM pegawai WHERE nip='$nip'");
     <div class="bread col-md-9 ms-sm-auto col-lg-10 fs-6 pt-4 pb-1 px-3">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?= base_url('pegawai') ?>">Data Pegawai</a></li>
+                <li class="breadcrumb-item"><a href="<?= adm_url('pegawai') ?>">Data Pegawai</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Detail Pegawai</li>
             </ol>
         </nav>
@@ -46,7 +46,7 @@ $data_detail = query("SELECT * FROM pegawai WHERE nip='$nip'");
             <div class="card">
                 <div class="card-body">
                     <?php
-                    require_once "detail_pegawai/profil.php";
+                    require_once "../profil.php";
                     ?>
                 </div>
             </div>
