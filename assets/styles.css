@@ -1,3 +1,12 @@
+:root {
+    --clr-blue: #c3d9e0;
+    --clr-blue-light: #b5d6ee;
+    --clr-blue-dark: #508ea1;
+    --clr-blue-darker: #387588;
+    --clr-gray: #dee6ee;
+    --clr-gray-light: #f7f5f5;
+}
+
 body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
@@ -17,6 +26,7 @@ main {
 
 body {
     font-size: .875rem;
+    background-color: var(--clr-gray-light);
 }
 
 .sidebar {
@@ -27,7 +37,7 @@ body {
     left: 0;
     z-index: 100;
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-    background-color: #eff0f3;
+    background-color: var(--clr-gray);
 }
 
 .sidebar-header {
@@ -42,6 +52,35 @@ body {
     background-color: transparent;
 }
 
+.card-header .btn {
+    margin-right: 2px;
+    float: right;
+}
+
+.card-header .btn-add {
+    background-color: var(--clr-blue-dark);
+    color: var(--clr-gray-light);
+}
+
+.card-header .btn-add:hover,
+.card-header .btn-add:focus {
+    border-color: var(--clr-blue-darker);
+    background-color: var(--clr-blue-darker);
+    color: var(--clr-gray-light);
+}
+
+.card-header .btn-edit {
+    background-color: var(--clr-blue-dark);
+    color: var(--clr-gray-light);
+}
+
+.card-header .btn-edit:hover,
+.card-header .btn-edit:focus {
+    border-color: var(--clr-blue-darker);
+    background-color: var(--clr-blue-darker);
+    color: var(--clr-gray-light);
+}
+
 .card-footer {
     justify-content: right;
 }
@@ -50,10 +89,26 @@ body {
     outline: 0;
 }
 
+.btn-detail:hover,
+.btn-detail:focus {
+    border-color: var(--clr-blue);
+    background-color: var(--clr-blue);
+}
+
+.btn-edit:hover,
+.btn-edit:focus {
+    border-color: var(--clr-blue);
+    background-color: var(--clr-blue);
+}
+
 .btn-toggle:hover,
 .btn-toggle:focus {
     color: rgba(0, 0, 0, 0.85);
-    background-color: #d9dff3;
+    background-color: var(--clr-blue);
+}
+
+.breadcrumb-item>a {
+    color: var(--clr-blue-darker);
 }
 
 .scrollarea {

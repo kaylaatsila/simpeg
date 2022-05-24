@@ -48,7 +48,7 @@ if (isset($sub)) {
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link link-dark btn-toggle"><i class='bx bx-money'></i> Jabatan dan Gaji
+                    <a href="<?= base_url('jabatan_gaji') ?>" class="nav-link link-dark btn-toggle"><i class='bx bx-money'></i> Jabatan dan Gaji
                     </a>
                 </li>
                 <li>
