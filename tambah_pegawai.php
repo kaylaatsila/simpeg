@@ -106,7 +106,7 @@ require_once "templates/sidebar.php";
         </div>
         <div class="container-fluid align-items-right">
             <div class="card-footer">
-                <button type="submit" class="btn btn-success float-right"><i class='bx bx-save'></i> Simpan</button>
+                <button type="submit" class="btn btn-success"><i class='bx bx-save'></i> Simpan</button>
                 <a href="<?= base_url('pegawai') ?>" class="btn btn btn-outline-danger"> Batal</a>
             </div>
         </div>
