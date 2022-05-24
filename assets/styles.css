@@ -44,13 +44,17 @@ body {
     background-color: transparent;
 }
 
+.card-footer {
+    justify-content: right;
+}
+
 .dropdown-toggle {
     outline: 0;
 }
 
 .btn-toggle:hover,
 .btn-toggle:focus {
-    color: rgba(0, 0, 0, .85);
+    color: rgba(0, 0, 0, 0.85);
     background-color: #d9dff3;
 }
 

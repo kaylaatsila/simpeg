@@ -1,6 +1,7 @@
 <?php
-    require_once "templates/sidebar.php";
+require_once "templates/sidebar.php";
 ?>
+<div class="container-fluid">
     <div class="bread col-md-9 ms-sm-auto col-lg-10 fs-6 pt-4 pb-1 px-3">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -54,12 +55,13 @@
                                     <?= ucwords($p['status_pegawai']) ?>
                                 </td>
                                 <td>
-                                    <a href="" class="btn btn-success btn-sm"><i class='bx bx-info-circle'></i> Detail</a>
+                                    <a href="<?= base_url('detail_pegawai') ?>?id=<?= $p['nip'] ?>" class="btn btn-success btn-sm"><i class='bx bx-info-circle'></i> Detail</a>
                                 </td>
                             </tr>
-                            <?php endforeach; ?>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+</div>
