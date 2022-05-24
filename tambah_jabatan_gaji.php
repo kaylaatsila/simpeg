@@ -14,6 +14,7 @@ require_once "templates/sidebar.php";
 
     <div class="card col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="card-body align-items-center">Semua pegawai sudah terdata!</div>
+        
         <!-- <div class="card-body">
             <form method="POST" action="<?= base_url('config/proses_jabatan') ?>?add">
                 <div class="form-group row mb-2">
