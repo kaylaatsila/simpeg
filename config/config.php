@@ -93,6 +93,7 @@
     function create($query){
         global $koneksi;//mendeklarasikan variabel koneksi mengikuti variabel yang ada diatas
         $result = mysqli_query($koneksi, $query) or die(mysqli_error($koneksi));
+        return $result;
     }
 
     function update($query){
