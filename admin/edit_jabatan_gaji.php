@@ -56,7 +56,7 @@ $data = query("SELECT * FROM pegawai INNER JOIN jabatan ON pegawai.id_jabatan=ja
                 </div>
 
         </div>
-        <div class="card-footer">
+        <div class="card-footer" style="background-color: #ffffff;">
             <button type="submit" class="btn btn-success"><i class='bx bx-save'></i> Simpan</button>
         </div>
         </form>

@@ -56,6 +56,19 @@
         }
     }
 
+    function peg_url($url=null){
+        // set default url halaman
+        $pegurl = "http://localhost/adsi/pegawai";
+
+        // jika url yang dikirimkan meimiliki nilai
+        if ($url != null) {
+            // sistem akan mengarahkan ke url yang dituju
+            return $pegurl.'/'.$url.'.php';
+        } else{
+            return $pegurl;
+        }
+    }
+
     // yang membedakan asset dan base_url adalah di ekstension file yang ada di base_url
 
     // fungsi yang digunakan untuk mengeksekusi data yang ingin ditampilkan

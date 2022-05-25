@@ -96,7 +96,7 @@ $data = mysqli_fetch_assoc($result);
                 </fieldset>
 
                 <!-- disini tanda tempat form -->
-                <div class="card-footer">
+                <div class="card-footer" style="background-color: #ffffff;">
                     <button type="submit" class="btn btn-success"><i class='bx bx-save'></i> Simpan</button>
                     <a href="<?= adm_url('pegawai') ?>" class="btn btn btn-outline-danger"> Batal</a>
                 </div>

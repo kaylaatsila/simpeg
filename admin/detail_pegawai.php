@@ -31,25 +31,28 @@ $data_detail = query("SELECT * FROM pegawai WHERE nip='$nip'");
     </div>
 
     <!-- DataTales Example -->
-    <div class="row col-md-9 ms-sm-auto col-lg-10">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <div class="text-center">
-                        <h2 class="mt-3"><?= ucwords($data_detail[0]['nama_pegawai']) ?></h2>
-                        <span class="text-muted"><?= $data_detail[0]['nip'] ?></span>
+    <div class="card col-md-9 ms-sm-auto col-lg-10">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h2 class="mt-3"><?= ucwords($data_detail[0]['nama_pegawai']) ?></h2>
+                                <span class="text-muted"><?= $data_detail[0]['nip'] ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <?php
+                            require_once "profil.php";
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-body">
-                    <?php
-                    require_once "profil.php";
-                    ?>
-                </div>
-            </div>
-        </div>
     </div>
-</div>

@@ -81,22 +81,16 @@ body {
     color: var(--clr-gray-light);
 }
 
-.card-footer {
-    justify-content: right;
-}
-
 .dropdown-toggle {
     outline: 0;
 }
 
-.btn-detail:hover,
-.btn-detail:focus {
-    border-color: var(--clr-blue);
-    background-color: var(--clr-blue);
+.btn-link-custom {
+    text-decoration: underline;
 }
 
-.btn-edit:hover,
-.btn-edit:focus {
+.btn-link-custom:hover,
+.btn-link-custom:focus {
     border-color: var(--clr-blue);
     background-color: var(--clr-blue);
 }

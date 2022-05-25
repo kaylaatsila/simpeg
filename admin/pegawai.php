@@ -54,8 +54,9 @@ require_once "../templates/sidebar.php";
                                     <?= ucwords($p['status_pegawai']) ?>
                                 </td>
                                 <td>
-                                    <a href="<?= adm_url('detail_pegawai') ?>?id=<?= $p['nip'] ?>" class="btn btn-detail btn-sm"><i class='bx bx-info-circle'></i> Detail</a>
-                                    <a href="<?= adm_url('edit_pegawai') ?>?id=<?= $p['nip'] ?>" class="btn btn-edit btn-sm"><i class='bx bx-pencil'></i> Edit</a>
+                                    <a href="<?= adm_url('detail_pegawai') ?>?id=<?= $p['nip'] ?>" class="btn btn-link-custom btn-sm"><i class='bx bx-info-circle'></i> Detail</a>
+                                    <a href="<?= adm_url('edit_pegawai') ?>?id=<?= $p['nip'] ?>" class="btn btn-link-custom btn-sm"><i class='bx bx-pencil'></i> Edit</a>
+                                    <a href="<?= adm_url('hapus_pegawai') ?>?id=<?= $p['nip'] ?>" class="btn btn-link-custom btn-sm"><i class='bx bx-trash'></i> Hapus</a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
