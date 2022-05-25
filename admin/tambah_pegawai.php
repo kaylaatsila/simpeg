@@ -13,8 +13,8 @@ require_once "../templates/sidebar.php";
     </div>
 
     <div class="card col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="card-body">
-            <form method="POST" action="<?= base_url('config/proses_pegawai') ?>?add" enctype="multipart/form-data">
+        <form method="POST" action="<?= base_url('config/proses_pegawai') ?>?add" enctype="multipart/form-data">
+            <div class="card-body">
                 <div class="form-group row mb-2">
                     <label for="nip" class="col-sm-3 col-form-label">NIP</label>
                     <div class="col-sm-9">
@@ -92,8 +92,8 @@ require_once "../templates/sidebar.php";
                         </div>
                     </div>
                 </fieldset>
-        </div>
-        <div class="card-footer" style="background-color: #ffffff;">
+            </div>
+            <div class="card-footer" style="background-color: #ffffff;">
                 <button type="submit" class="btn btn-success"><i class='bx bx-save'></i> Simpan</button>
                 <a href="<?= adm_url('pegawai') ?>" class="btn btn btn-outline-danger"> Batal</a>
             </div>

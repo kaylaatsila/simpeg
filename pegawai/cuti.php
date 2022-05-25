@@ -20,7 +20,7 @@ require_once "../templates/sidebar_pegawai.php";
                     $total = query("SELECT COUNT(1329010001) as total FROM cuti WHERE nip=1329010001"); 
                     echo 3 - $total[0]['total']; ?>
             </label>
-            <a href="<?= peg_url('edit_pegawai') ?>" class="btn btn-add btn-sm float-right"><i class='bx bx-plus'></i> Tambah Cuti</a>
+            <a href="<?= peg_url('tambah_cuti') ?>" class="btn btn-add btn-sm float-right"><i class='bx bx-plus'></i> Tambah Cuti</a>
         </div>
 
         <div class="card-body">
