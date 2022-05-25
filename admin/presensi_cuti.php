@@ -15,8 +15,8 @@ require_once "../templates/sidebar.php";
         <div class="card-body">
             <nav>
                 <div class="nav nav-tabs mt-2" id="nav-tab" role="tablist">
-                    <button class="nav-link" id="nav-presensi-tab" data-bs-toggle="tab" data-bs-target="#nav-presensi" type="button" role="tab" aria-selected="true">Data Presensi</button>
-                    <button class="nav-link" id="nav-cuti-tab" data-bs-toggle="tab" data-bs-target="#nav-cuti" type="button" role="tab">Data Cuti</button>
+                    <button class="nav-link link-dark" id="nav-presensi-tab" data-bs-toggle="tab" data-bs-target="#nav-presensi" type="button" role="tab" aria-selected="true">Data Presensi</button>
+                    <button class="nav-link link-dark" id="nav-cuti-tab" data-bs-toggle="tab" data-bs-target="#nav-cuti" type="button" role="tab">Data Cuti</button>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">

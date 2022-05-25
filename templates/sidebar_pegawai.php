@@ -45,23 +45,23 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?= peg_url('presensi') ?>" class="nav-link link-dark btn-toggled"><i class='bx bx-fingerprint'></i> Riwayat Presensi
+                    <a href="<?= peg_url('presensi') ?>" class="nav-link link-dark btn-toggle"><i class='bx bx-fingerprint'></i> Riwayat Presensi
                     </a>
                 </li>
                 <li>
-                    <a href="<?= peg_url('cuti') ?>" class="nav-link link-dark btn-toggled"><i class='bx bx-calendar'></i> Cuti
+                    <a href="<?= peg_url('cuti') ?>" class="nav-link link-dark btn-toggle"><i class='bx bx-calendar'></i> Cuti
                     </a>
                 </li>
                 <li>
-                    <a href="<?= peg_url('laporan_kinerja') ?>" class="nav-link link-dark btn-toggled"><i class='bx bxs-report'></i> Laporan Kinerja
+                    <a href="<?= peg_url('laporan_kinerja') ?>" class="nav-link link-dark btn-toggle"><i class='bx bxs-report'></i> Laporan Kinerja
                     </a>
                 </li>
             </ul>
             <hr>
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="https://avatars.githubusercontent.com/u/79374942?v=4" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>imud</strong>
+                    <img src="https://cdn.discordapp.com/attachments/782276090117881879/978995111906119781/cat.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>Fulan Fulani</strong>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                     <li><a class="dropdown-item" href="<?= adm_url('pegawai') ?>">admin</a></li>

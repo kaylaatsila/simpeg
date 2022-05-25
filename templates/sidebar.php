@@ -52,11 +52,11 @@ if (isset($sub)) {
                     </a>
                 </li>
                 <li>
-                    <a href="<?= adm_url('presensi_cuti') ?>" class="nav-link link-dark btn-toggled"><i class='bx bx-fingerprint'></i> Presensi dan Cuti
+                    <a href="<?= adm_url('presensi_cuti') ?>" class="nav-link link-dark btn-toggle"><i class='bx bx-fingerprint'></i> Presensi dan Cuti
                     </a>
                 </li>
                 <li>
-                    <a href="<?= adm_url('laporan_kepegawaian') ?>" class="nav-link link-dark btn-toggled"><i class='bx bxs-report'></i> Laporan Kepegawaian
+                    <a href="<?= adm_url('laporan_kepegawaian') ?>" class="nav-link link-dark btn-toggle"><i class='bx bxs-report'></i> Laporan Kepegawaian
                     </a>
                 </li>
             </ul>
@@ -64,7 +64,7 @@ if (isset($sub)) {
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="https://avatars.githubusercontent.com/u/79374942?v=4" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>imud</strong>
+                    <strong>admin</strong>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                     <li><a class="dropdown-item" href="<?= peg_url('pegawai') ?>">pegawai</a></li>

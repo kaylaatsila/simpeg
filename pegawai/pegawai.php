@@ -14,7 +14,7 @@ $data_pegawai = query("SELECT * FROM pegawai WHERE nip=1329010001");
     </div>
 
     <!-- DataTales Example -->
-    <div class="card col-md-9 ms-sm-auto col-lg-10">
+    <div class="card col-md-9 ms-sm-auto col-lg-10 px-4">
         <div class="card-header px-4 py-3">
             <a href="<?= peg_url('edit_pegawai') ?>" class="btn btn-edit btn-sm float-right"><i class='bx bx-pencil'></i> Edit Data</a>
         </div>
