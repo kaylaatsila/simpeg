@@ -2,8 +2,8 @@
 require_once "config.php";
 
 if (isset($_GET['add'])) {
-    $nip = mysqli_real_escape_string($koneksi, $_POST['nip']); echo $nip;
-    $nama_pegawai = strip_tags($_POST['nama_pegawai']); echo $nama_pegawai;
+    $nip = mysqli_real_escape_string($koneksi, $_POST['nip']); 
+    $nama_pegawai = strip_tags($_POST['nama_pegawai']);
     $tempat_lahir = strip_tags($_POST['tempat_lahir']);
     $tgl_lahir = strip_tags($_POST['tgl_lahir']);
     $jk = strip_tags($_POST['jk']);

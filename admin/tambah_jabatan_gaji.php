@@ -1,5 +1,8 @@
 <?php
 require_once "../templates/sidebar.php";
+
+$data_jabatan = array("Staff Marketing", "Staff IT", "Security");
+
 ?>
 
 <div class="container-fluid">
@@ -16,7 +19,7 @@ require_once "../templates/sidebar.php";
         <!-- <div class="card-body align-items-center">Semua pegawai sudah terdata!</div> -->
         
         <div class="card-body">
-            <form method="POST" action="<?= adm_url('config/proses_jabatan') ?>?add">
+            <form method="POST" action="<?= base_url('config/proses_jabatan_gaji') ?>?add">
                 <div class="form-group row mb-2">
                     <label for="nip" class="col-sm-3 col-form-label">Pilih Pegawai</label>
                     <div class="col-sm-9">
@@ -32,39 +35,36 @@ require_once "../templates/sidebar.php";
                 <div class="form-group row mb-2">
                     <label for="jabatan" class="col-sm-3 col-form-label">Pilih Jabatan</label>
                     <div class="col-sm-9">
-                        <select class="form-control" name="jabatan" id="jabatan" required autocomplete="off" autofocus>
+                        <select class="form-control" name="jabatan" id="jabatan" required autocomplete="off" autofocus onchange="jabatanFunc(this.options[this.selectedIndex].value)">
                             <?php
-                            $data_jabatan = query("SELECT * FROM jabatan_gaji GROUP BY id_jabatan asc");
-
                             foreach ($data_jabatan as $jabatan) : ?>
-                                <option value="<?= $jabatan['id_jabatan_gaji'] ?>"><?= $jabatan['nama_jabatan'] ?></option>
+                                <option value="<?= $jabatan ?>"><?= $jabatan ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
-                    <label for="jabatan" class="col-sm-3 col-form-label">Gaji</label>
+                    <label for="gaji_pokok" class="col-sm-3 col-form-label">Gaji Pokok</label>
                     <div class="col-sm-9">
-                        <select class="form-control" name="gaji" id="gaji" disabled>
-                            <?php
-                            $data_gaji = query("SELECT * FROM jabatan_gaji GROUP BY id_jabatan asc");
-
-                            foreach ($data_gaji as $gaji) : ?>
-                                <option value="<?= $gaji['id_jabatan_gaji'] ?>"><?= $jabatan['gaji_pokok'] ?></option>
-                            <?php endforeach; ?>
-                        </select>
+                        <input type="number" class="form-control" name="gajipokok" id="gaji_pokok" value="4000000" readonly></input>
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label for="gaji_lembur" class="col-sm-3 col-form-label">Gaji Lembur</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" name="gajilembur" id="gaji_lembur" value="500000" readonly></input>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
                     <label for="tmt" class="col-sm-3 col-form-label">Dari Tanggal</label>
                     <div class="col-sm-9">
-                        <input type="date" class="form-control" value="<?= date('Y-m-d'); ?>" name="tmt" placeholder="TMT" required>
+                        <input type="date" class="form-control" value="<?= date('Y-m-d'); ?>" name="tmt" required>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
                     <label for="sampai_tgl" class="col-sm-3 col-form-label">Sampai Tanggal</label>
                     <div class="col-sm-9">
-                        <input type="date" class="form-control" value="<?= date('Y-m-d'); ?>" name="sampai_tgl" placeholder="Tanggal Ijazah" required>
+                        <input type="date" class="form-control" value="<?= date('Y-m-d'); ?>" name="st" required>
                     </div>
                 </div>
 
@@ -75,3 +75,18 @@ require_once "../templates/sidebar.php";
         </form>
     </div>
 </div>
+
+<script>
+    var dataJabatan = {
+        "Staff Marketing": [4000000, 500000],
+        "Staff IT":  [10000000, 700000],
+        "Security":  [3000000, 500000]
+    };
+
+    function jabatanFunc(x){
+        var pokok = dataJabatan[x][0];
+        var lembur = dataJabatan[x][1];
+        document.getElementById("gaji_pokok").setAttribute("value", pokok);
+        document.getElementById("gaji_lembur").setAttribute("value", lembur);
+    }
+</script>

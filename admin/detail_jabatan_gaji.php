@@ -1,7 +1,7 @@
 <?php
-require_once "../templates/sidebar_pegawai.php";
+require_once "../templates/sidebar.php";
 
-$nip = $_SESSION['username'];
+$nip = $_GET['id'];
 
 $base = query("SELECT * 
                 FROM pegawai
