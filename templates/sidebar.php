@@ -1,11 +1,15 @@
 <?php
-// jika yang dipanggil user adalah file yang berada didalam subfolder dan memiliki variabel sub, panggil file config yang ada sesuai dengan posisi file di folder
-if (isset($sub)) {
-    // memanggil data configurasi dan function dari subfolder
-    require_once $sub . "config/config.php";
+require_once "../config/config.php";
+
+if (isset($_SESSION['login'])) {
+
 } else {
-    // memanggil data configurasi dan function
-    require_once "../config/config.php";
+    echo "
+    <script>
+        alert('Silakan login terlebih dahulu!');
+        window.location='" . base_url('login') . "';
+    </script>            
+";
 }
 ?>
 
@@ -29,10 +33,12 @@ if (isset($sub)) {
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
         body {
             font-family: 'Rubik', sans-serif;
         }
     </style>
+</head>
 
 <body>
     <!-- Sidebar -->
@@ -67,12 +73,11 @@ if (isset($sub)) {
                     <strong>admin</strong>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                    <li><a class="dropdown-item" href="<?= peg_url('pegawai') ?>">pegawai</a></li>
+                    <!-- <li><a class="dropdown-item" href="<?= peg_url('pegawai') ?>">pegawai</a></li>
                     <li>
                         <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Pengaturan</a></li>
-                    <li><a class="dropdown-item" href="#">Keluar</a></li>
+                    </li> -->
+                    <li><a class="dropdown-item" href="<?= base_url('config/proses_log') ?>?logout">Keluar</a></li>
                 </ul>
             </div>
         </div>

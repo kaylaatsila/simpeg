@@ -2,8 +2,10 @@
 // menghubungkan file header dengan file edit_pegawai
 require_once "../templates/sidebar_pegawai.php";
 
+$nip = $_SESSION['username'];
+
 // paggil data pegawai berdasarkan nip untuk ditampilkan di form sebelum melakukan perubahan data
-$result = mysqli_query($koneksi, "SELECT * FROM pegawai WHERE nip=1329010001");
+$result = mysqli_query($koneksi, "SELECT * FROM pegawai WHERE nip='$nip'");
 // hasil dari proses result akan disimpan ke variabel data
 $data = mysqli_fetch_assoc($result);
 ?>

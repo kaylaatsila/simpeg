@@ -13,9 +13,9 @@ require_once "../templates/sidebar.php";
     </div>
 
     <div class="card col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="card-body align-items-center">Semua pegawai sudah terdata!</div>
+        <!-- <div class="card-body align-items-center">Semua pegawai sudah terdata!</div> -->
         
-        <!-- <div class="card-body">
+        <div class="card-body">
             <form method="POST" action="<?= adm_url('config/proses_jabatan') ?>?add">
                 <div class="form-group row mb-2">
                     <label for="nip" class="col-sm-3 col-form-label">Pilih Pegawai</label>
@@ -34,10 +34,23 @@ require_once "../templates/sidebar.php";
                     <div class="col-sm-9">
                         <select class="form-control" name="jabatan" id="jabatan" required autocomplete="off" autofocus>
                             <?php
-                            $data_jabatan = query("SELECT * FROM jabatan GROUP BY id_jabatan asc");
+                            $data_jabatan = query("SELECT * FROM jabatan_gaji GROUP BY id_jabatan asc");
 
                             foreach ($data_jabatan as $jabatan) : ?>
-                                <option value="<?= $jabatan['id_jabatan'] ?>"><?= $jabatan['nama_jabatan'] ?></option>
+                                <option value="<?= $jabatan['id_jabatan_gaji'] ?>"><?= $jabatan['nama_jabatan'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row mb-2">
+                    <label for="jabatan" class="col-sm-3 col-form-label">Gaji</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" name="gaji" id="gaji" disabled>
+                            <?php
+                            $data_gaji = query("SELECT * FROM jabatan_gaji GROUP BY id_jabatan asc");
+
+                            foreach ($data_gaji as $gaji) : ?>
+                                <option value="<?= $gaji['id_jabatan_gaji'] ?>"><?= $jabatan['gaji_pokok'] ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
@@ -59,6 +72,6 @@ require_once "../templates/sidebar.php";
         <div class="card-footer" style="background-color: #ffffff;">
             <button type="submit" class="btn btn-success"><i class='bx bx-save'></i> Simpan</button>
         </div>
-        </form> -->
+        </form>
     </div>
 </div>

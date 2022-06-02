@@ -1,5 +1,7 @@
 <?php
 require_once "../templates/sidebar_pegawai.php";
+
+$nip = $_SESSION['username'];
 ?>
 
 <div class="container-fluid">
@@ -26,7 +28,7 @@ require_once "../templates/sidebar_pegawai.php";
                     <tbody>
                         <?php
                         $no = 1;
-                        $kueri = ("SELECT * FROM presensi WHERE presensi.nip = 1329010001");
+                        $kueri = ("SELECT * FROM presensi WHERE presensi.nip = '$nip'");
                         $data = query($kueri);
                         foreach ($data as $p) : ?>
                             <tr>

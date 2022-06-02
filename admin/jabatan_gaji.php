@@ -33,8 +33,8 @@ require_once "../templates/sidebar.php";
                         <?php
                         $no = 1;
                         $kueri =  ("SELECT * 
-                                    FROM pegawai, jabatan, gaji
-                                    WHERE pegawai.id_jabatan = jabatan.id_jabatan AND jabatan.id_gaji = gaji.id_gaji ");
+                                    FROM pegawai, jabatan_gaji
+                                    WHERE pegawai.id_jabatan_gaji = jabatan_gaji.id_jabatan_gaji ");
                         $data_p = query($kueri);
                         foreach ($data_p as $p) : ?>
                             <tr>
@@ -51,7 +51,7 @@ require_once "../templates/sidebar.php";
                                     <?= $p['nama_jabatan'] ?>
                                 </td>
                                 <td>
-                                    Rp. <?= $p['pokok'] + $p['tunjangan'] + $p['lembur'] ?>
+                                    Rp. <?= $p['gaji_pokok'] + $p['gaji_lembur'] ?>
                                 </td>
                                 <td>
                                     <a href="<?= adm_url('detail_jabatan_gaji') ?>?id=<?= $p['nip'] ?>" class="btn btn-detail btn-sm"><i class='bx bx-info-circle'></i> Detail</a>

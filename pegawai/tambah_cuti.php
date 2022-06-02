@@ -13,7 +13,7 @@ require_once "../templates/sidebar_pegawai.php";
     </div>
 
     <div class="card col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <form method="POST" action="<?= base_url('config/proses_pegawai') ?>?add" enctype="multipart/form-data">
+        <form method="POST" action="<?= base_url('config/proses_cuti') ?>?add" enctype="multipart/form-data">
             <div class="card-body">
             <div class="form-group row mb-2">
                     <label for="tmt" class="col-sm-3 col-form-label">Dari Tanggal</label>
@@ -36,7 +36,7 @@ require_once "../templates/sidebar_pegawai.php";
             </div>
             <div class="card-footer" style="background-color: #ffffff;">
                 <button type="submit" class="btn btn-success"><i class='bx bx-save'></i> Simpan</button>
-                <a href="<?= peg_url('pegawai') ?>" class="btn btn btn-outline-danger"> Batal</a>
+                <a href="<?= peg_url('cuti') ?>" class="btn btn btn-outline-danger"> Batal</a>
             </div>
         </form>
     </div>

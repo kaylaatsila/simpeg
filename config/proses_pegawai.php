@@ -14,7 +14,12 @@ if (isset($_GET['add'])) {
 
     $query = create("INSERT INTO pegawai VALUES ('$nip', '$nama_pegawai', '$tempat_lahir', '$tgl_lahir', '$jk', '$no_hp', '$email', '$alamat', '$status_pegawai', ' ')");
 
-    if ($query) {
+    $pass = str_replace("-", "", $tgl_lahir);
+    $hash = password_hash($pass, PASSWORD_DEFAULT);
+
+    $akun = create("INSERT INTO akun VALUES ('$nip', '$hash', 'pegawai')");
+
+    if ($query && $akun) {
         echo '<script>
             alert("Data berhasil ditambah!")
             window.location = "' . adm_url('pegawai') . '";

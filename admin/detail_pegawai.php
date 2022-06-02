@@ -4,16 +4,6 @@ require_once "../templates/sidebar.php";
 //simpan data id(nip) yang dikirim dari halaman pegawai ke dalam variabel nip
 $nip = $_GET['id'];
 
-// letakkan kondisi function yang diinginkan
-// tentukan variabel yang akan digunakan untuk menyimpan data function penghubung kehalaman. defualt halaman yaitu profile
-// cek data function yang dikirim dari halaman sebelumnya untuk menampilkan detail data pegawai yang diinginkan
-if (isset($_SESSION['func'])) {
-    $func = $_SESSION['func'];
-} else {
-    $func = "link_profil";
-}
-
-
 // lakukan filter data berdasarkan nip yang telah ditangkap divariabel nip dan jalankan function query
 // simpan hasil query kedalam variabel data_detail
 $data_detail = query("SELECT * FROM pegawai WHERE nip='$nip'");

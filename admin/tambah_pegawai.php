@@ -16,9 +16,9 @@ require_once "../templates/sidebar.php";
         <form method="POST" action="<?= base_url('config/proses_pegawai') ?>?add" enctype="multipart/form-data">
             <div class="card-body">
                 <div class="form-group row mb-2">
-                    <label for="nip" class="col-sm-3 col-form-label">NIP</label>
+                    <label for="nip" class="col-sm-3 col-form-label">Nomor Induk</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="nip" id="nip" placeholder="NIP" required autocomplete="off" autofocus>
+                        <input type="number" class="form-control" name="nip" id="nip" placeholder="Nomor Induk" required autocomplete="off" autofocus>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
@@ -58,7 +58,7 @@ require_once "../templates/sidebar.php";
                 <div class="form-group row mb-2">
                     <label for="no_hp" class="col-sm-3 col-form-label">Nomor Handphone</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="Nomor Handphone" required autocomplete="off">
+                        <input type="number" class="form-control" name="no_hp" id="no_hp" placeholder="Nomor Handphone" required autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group row mb-2">

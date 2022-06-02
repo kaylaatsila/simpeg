@@ -1,5 +1,17 @@
 <?php
-    require_once "../config/config.php";
+require_once "../config/config.php";
+
+if (isset($_SESSION['login'])) {
+    $nip = $_SESSION['username'];
+    $data_pegawai = query("SELECT nama_pegawai FROM pegawai WHERE nip='$nip'");
+} else {
+    echo "
+        <script>
+            alert('Silakan login terlebih dahulu!');
+            window.location='" . base_url('login') . "';
+        </script>            
+    ";
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +34,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+
         body {
             font-family: 'Rubik', sans-serif;
         }
@@ -61,15 +74,14 @@
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="https://cdn.discordapp.com/attachments/782276090117881879/978995111906119781/cat.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
-                    <strong>Fulan Fulani</strong>
+                    <strong><?= ucwords($data_pegawai[0]['nama_pegawai']) ?></strong>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                    <li><a class="dropdown-item" href="<?= adm_url('pegawai') ?>">admin</a></li>
+                    <!-- <li><a class="dropdown-item" href="<?= adm_url('pegawai') ?>">admin</a></li>
                     <li>
                         <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Pengaturan</a></li>
-                    <li><a class="dropdown-item" href="#">Keluar</a></li>
+                    </li> -->
+                    <li><a class="dropdown-item" href="<?= base_url('config/proses_log') ?>?logout">Keluar</a></li>
                 </ul>
             </div>
         </div>

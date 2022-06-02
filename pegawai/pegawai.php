@@ -1,7 +1,9 @@
 <?php
 require_once "../templates/sidebar_pegawai.php";
 
-$data_pegawai = query("SELECT * FROM pegawai WHERE nip=1329010001");
+$nip = $_SESSION['username'];
+
+$data_pegawai = query("SELECT * FROM pegawai WHERE nip='$nip'");
 ?>
 
 <div class="container-fluid">

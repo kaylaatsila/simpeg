@@ -1,5 +1,7 @@
 <?php
 require_once "../templates/sidebar_pegawai.php";
+
+$nip = $_SESSION['username'];
 ?>
 
 <div class="container-fluid">
@@ -17,7 +19,7 @@ require_once "../templates/sidebar_pegawai.php";
             <label class="mt-2 float-left"><strong>Sisa Kredit Cuti</strong></label> : 
             <label>
                 <?php 
-                    $total = query("SELECT COUNT(1329010001) as total FROM cuti WHERE nip=1329010001"); 
+                    $total = query("SELECT COUNT($nip) as total FROM cuti WHERE nip='$nip'"); 
                     echo 3 - $total[0]['total']; ?>
             </label>
             <a href="<?= peg_url('tambah_cuti') ?>" class="btn btn-add btn-sm float-right"><i class='bx bx-plus'></i> Tambah Cuti</a>
@@ -37,7 +39,7 @@ require_once "../templates/sidebar_pegawai.php";
                     <tbody>
                         <?php
                         $no = 1;
-                        $data = query("SELECT * FROM cuti WHERE nip=1329010001");
+                        $data = query("SELECT * FROM cuti WHERE nip='$nip'");
                         foreach ($data as $p) : ?>
                             <tr>
                                 <td>
