@@ -28,13 +28,15 @@ require_once "../templates/sidebar.php";
                                 <tr>
                                     <th>No.</th>
                                     <th>Nama Pegawai</th>
-                                    <th>NIP</th>
+                                    <th>Nomor Induk</th>
+                                    <th>Waktu</th>
+                                    <th>Tanggal</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 $no = 1;
-                                $data_p = query("SELECT * FROM pegawai GROUP BY nip asc");
+                                $data_p = query("SELECT * FROM pegawai INNER JOIN presensi WHERE presensi.nip = pegawai.nip GROUP BY pegawai.nip asc");
                                 foreach ($data_p as $p) : ?>
                                     <tr>
                                         <td>
@@ -45,6 +47,12 @@ require_once "../templates/sidebar.php";
                                         </td>
                                         <td>
                                             <?= $p['nip'] ?>
+                                        </td>
+                                        <td>
+                                            <?= $p['jam_presensi'] ?>
+                                        </td>
+                                        <td>
+                                            <?= $p['tanggal_presensi'] ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -60,13 +68,16 @@ require_once "../templates/sidebar.php";
                                 <tr>
                                     <th>No.</th>
                                     <th>Nama Pegawai</th>
-                                    <th>NIP</th>
+                                    <th>Nomor Induk</th>
+                                    <th>Tanggal Mulai Cuti</th>
+                                    <th>Tanggal Akhir Cuti</th>
+                                    <th>Alasan Cuti</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
                                 $no = 1;
-                                $data_p = query("SELECT * FROM pegawai GROUP BY nip asc");
+                                $data_p = query("SELECT * FROM pegawai INNER JOIN cuti WHERE cuti.nip = pegawai.nip GROUP BY pegawai.nip asc");
                                 foreach ($data_p as $p) : ?>
                                     <tr>
                                         <td>
@@ -77,6 +88,15 @@ require_once "../templates/sidebar.php";
                                         </td>
                                         <td>
                                             <?= $p['nip'] ?>
+                                        </td>
+                                        <td>
+                                            <?= $p['tanggal_mulai_cuti'] ?>
+                                        </td>
+                                        <td>
+                                            <?= $p['tanggal_akhir_cuti'] ?>
+                                        </td>
+                                        <td>
+                                            <?= $p['alasan_cuti'] ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

@@ -1,5 +1,7 @@
 <?php 
     require_once "../../config/config.php";
+    $awal = $_GET["awal"];
+    $akhir = $_GET["akhir"];
 ?>
 
 <!DOCTYPE html>
@@ -29,9 +31,9 @@
     <div class="container-fluid">
         <header>
             <h3 class="text-center mt-5">Laporan Data Diri, Jabatan, dan Gaji</h3>
-            <h5 class="text-center mb-5">PT. ABC</h5>
+            <h5  class="text-center mb-5">PT. ABC</h5>
         </header>
-        <!-- <h5 class="mx-5">Periode Laporan: <?= $awal ?> s.d. <?= $akhir ?></h5> -->
+        <h5 class="mx-5">Periode Laporan: <?= $awal ?> s.d. <?= $akhir ?></h5>
         <div class="table-responsive m-5">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
@@ -75,7 +77,6 @@
                                     <?= $p['gaji_pokok'] + $p['gaji_lembur'] ?>
                                 </td>
                                 <td>
-                                    
                                     <?= date('d-m-Y', strtotime($p['tanggal_mulai'])) ?> s.d. <?= date('d-m-Y', strtotime($p['tanggal_akhir'])) ?>
                                 </td>
                                 <td>

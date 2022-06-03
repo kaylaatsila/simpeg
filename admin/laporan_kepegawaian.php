@@ -1,7 +1,7 @@
 <?php
 require_once "../templates/sidebar.php";
 
-$opsi_laporan = array('Laporan Data Diri, Jabatan, dan Gaji', 'Rekapitulasi Presensi dan Cuti');
+$opsi_laporan = array('Laporan Data Diri, Jabatan, dan Gaji');
 ?>
 
 <div class="container-fluid">
@@ -15,11 +15,11 @@ $opsi_laporan = array('Laporan Data Diri, Jabatan, dan Gaji', 'Rekapitulasi Pres
 
     <div class="card col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="card-body">
-            <form method="POST" action="<?= base_url('config/proses_laporan') ?>?print">
+            <form method="POST" action="<?= base_url('config/proses_laporan') ?>?administrator">
                 <div class="form-group row mb-2">
-                    <label for="jabatan" class="col-sm-3 col-form-label">Pilih Laporan Kepegawaian</label>
+                    <label for="laporan" class="col-sm-3 col-form-label">Pilih Laporan Kepegawaian</label>
                     <div class="col-sm-9">
-                        <select class="form-control" name="jabatan" id="jabatan" required autocomplete="off" autofocus>
+                        <select class="form-control" name="laporan" id="laporan" required autocomplete="off" autofocus>
                             <?php
                                 foreach ($opsi_laporan as $laporan) : ?>
                                     <option value="<?= $laporan ?>"><?= $laporan ?></option>

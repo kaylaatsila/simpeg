@@ -1,5 +1,6 @@
 <?php
 require_once "../templates/sidebar_pegawai.php";
+$laporan = array('Laporan Kinerja');         
 ?>
 
 <div class="container-fluid">
@@ -13,30 +14,25 @@ require_once "../templates/sidebar_pegawai.php";
 
     <div class="card col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="card-body">
-            <form method="POST" action="<?= base_url('config/proses_laporan') ?>?print">
+            <form method="POST" action="<?= base_url('config/proses_laporan') ?>?pegawai">
                 <div class="form-group row mb-2">
                     <label for="jabatan" class="col-sm-3 col-form-label">Pilih Laporan Kinerja</label>
                     <div class="col-sm-9">
                         <select class="form-control" name="laporan" id="laporan" required autocomplete="off" autofocus>
-                            <?php
-                            $laporan = array('Data Diri', 'Data Jabatan dan Gaji', 'Rekapitulasi Presensi dan Cuti');
-
-                            for ($x = 0; $x < 3; $x++) : ?>                      
-                                <option value="<?= $laporan[$x] ?>"><?= $laporan[$x] ?></option>
-                            <?php endfor; ?>
+                                <option value="<?= $laporan[0] ?>"><?= $laporan[0] ?></option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
                     <label for="tmt" class="col-sm-3 col-form-label">Dari Tanggal</label>
                     <div class="col-sm-9">
-                        <input type="date" class="form-control" value="<?= date('Y-m-d'); ?>" name="tmt" placeholder="TMT" required>
+                        <input type="date" class="form-control" value="<?= date('Y-m-d'); ?>" name="awal" required>
                     </div>
                 </div>
                 <div class="form-group row mb-2">
                     <label for="sampai_tgl" class="col-sm-3 col-form-label">Sampai Tanggal</label>
                     <div class="col-sm-9">
-                        <input type="date" class="form-control" value="<?= date('Y-m-d'); ?>" name="sampai_tgl" placeholder="Tanggal Ijazah" required>
+                        <input type="date" class="form-control" value="<?= date('Y-m-d'); ?>" name="akhir" required>
                     </div>
                 </div>
 
