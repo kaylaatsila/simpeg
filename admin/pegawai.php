@@ -22,7 +22,7 @@ require_once "../templates/sidebar.php";
                         <tr>
                             <th>No.</th>
                             <th>Nama Pegawai</th>
-                            <th>NIP</th>
+                            <th>Nomor Induk</th>
                             <th>Email</th>
                             <th>No. HP</th>
                             <th>Aktif/Nonaktif</th>
