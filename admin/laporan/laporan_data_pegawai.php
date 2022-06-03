@@ -1,5 +1,5 @@
 <?php 
-    require_once "../../config/config.php"
+    require_once "../../config/config.php";
 ?>
 
 <!DOCTYPE html>
@@ -28,8 +28,10 @@
 <body>
     <div class="container-fluid">
         <header>
-            <h3 class="text-center m-5">Laporan Data Diri, Jabatan, dan Gaji</h3>
+            <h3 class="text-center mt-5">Laporan Data Diri, Jabatan, dan Gaji</h3>
+            <h5 class="text-center mb-5">PT. ABC</h5>
         </header>
+        <!-- <h5 class="mx-5">Periode Laporan: <?= $awal ?> s.d. <?= $akhir ?></h5> -->
         <div class="table-responsive m-5">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
