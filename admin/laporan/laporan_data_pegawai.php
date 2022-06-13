@@ -25,11 +25,17 @@
         body {
             font-family: 'Rubik', sans-serif;
         }
-    </style>
+
+        .print{
+            float: right;
+            margin: 20px;
+        }
+        </style>
 </head>
 <body>
     <div class="container-fluid">
         <header>
+            <button onclick="window.print()" class="print">Print</button><br>
             <h3 class="text-center mt-5">Laporan Data Diri, Jabatan, dan Gaji</h3>
             <h5  class="text-center mb-5">PT. ABC</h5>
         </header>
